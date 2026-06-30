@@ -4,10 +4,8 @@ import multiprocessing
 from pathlib import Path
 from multiprocessing import Pool
 
-GOLD_BIN = "/opt/programs/csd/ccdc-software/gold/GOLD/bin/gold_auto"
+#GOLD_BIN = "add directory to your HERMES bin"
 
-# The strictly compliant standard format required by the gold_auto parser. 
-# It requires block headers, and the crucial param_file and tordist_file defaults.
 GOLD_TEMPLATE = """GOLD CONFIGURATION FILE
 
 DATA FILES
