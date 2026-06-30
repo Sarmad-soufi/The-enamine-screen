@@ -1,12 +1,12 @@
 import subprocess
 from pathlib import Path
 
-container = Path("~/singularity/autodock.simg").expanduser()
-maps_dir = Path("~/data/docking/maps").expanduser()
-ligand_dir = Path("/home/sarmad/data/raw_data/enamine_set/Enamine_Discovery_Diversity_Set_50_plated/all_pdbqt").expanduser()
-out_dir = Path("~/data/docking/enamine/adgpu/out").expanduser()
+#container = Path("add dir to your singularity container").expanduser()
+#maps_dir = Path("add dir to your grid maps").expanduser()
+#ligand_dir = Path("add dir to your ligand dir").expanduser()
+#out_dir = Path("add the out dir").expanduser()
 
-fld_file = "Sec16_sec13.maps.fld"  # inside /maps
+fld_file = "Sec16_sec13.maps.fld"
 out_dir.mkdir(parents=True, exist_ok=True)
 
 ligands = list(ligand_dir.glob("*.pdbqt"))
