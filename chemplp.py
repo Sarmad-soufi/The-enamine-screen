@@ -4,9 +4,8 @@ import multiprocessing
 from pathlib import Path
 from multiprocessing import Pool
 
-GOLD_BIN = "/opt/programs/csd/ccdc-software/gold/GOLD/bin/gold_auto"
+#GOLD_BIN = "add directory to your HERMES bin"
 
-# Added the FITNESS FUNCTION block to explicitly call chemplp
 GOLD_TEMPLATE = """GOLD CONFIGURATION FILE
 
 DATA FILES
@@ -58,7 +57,7 @@ def run_gold(job):
         # Run inside out_dir to prevent temp file collision
         result = subprocess.run(cmd, capture_output=True, text=True, cwd=out_dir)
         
-        # Save the Python subprocess stream to a separate debug file
+       
         debug_file = out_dir / "subprocess_debug.log"
         with open(debug_file, "w") as f:
             f.write("--- STDOUT ---\n")
